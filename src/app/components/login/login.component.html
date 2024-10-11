@@ -1,0 +1,53 @@
+<div class="form-container">
+  <p class="heading">Login to your account</p>
+  <form class="login-form" [formGroup]="loginForm">
+    <div class="main">
+      <div class="form">
+   
+        <div class="email-div">
+          <label for="email">Email ID</label>
+          <input type="email" class="email" placeholder="Enter Email ID" formControlName="email"/>
+        </div>
+
+      <div class="password-div">
+        <label for="password">Password</label>
+        <input type="password" class="password" placeholder="Enter Password" formControlName="password" />
+      </div>
+
+        <div class="remember">
+          <!-- <input type="checkbox" class="input-checkbox" name="remember-me" value="check">
+          <p>Remember me</p> -->
+          <a href="#" class="forgot-password">Forgot Password</a>
+        </div>
+
+        <button (click)="onSubmit()" class="btn">login</button>
+
+        <div class="login-options">
+          <hr/>
+          <p class="para">Or Login With</p>
+          <hr/>
+        </div>
+
+        <div class="icons">
+          <div class="google ">
+            <img src="" alt="">
+          </div>
+          <div class="facebook ">
+            <img src="" alt="">
+          </div>
+          <div class="linkedIn ">
+            <img src="" alt="">
+          </div>
+        </div>
+     
+        <div class="register">
+          <p>Don't have an account?</p> 
+          <a routerLink="/signup" href="#">Register</a>
+        </div>
+      </div>
+
+
+      <div class="image-container"></div>
+    </div>
+  </form>
+</div>

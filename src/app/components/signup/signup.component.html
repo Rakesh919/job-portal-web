@@ -1,0 +1,54 @@
+<div class="form-container">
+  
+    <p class="heading">Registration form</p>
+  
+  <form class="login-form" [formGroup]="signupUser">
+    
+    <div class="name-label labels">
+        <label for="name">Full name</label> <br>
+        <input type="text" class="name" placeholder="Enter your full name" formControlName="name">
+    </div>
+
+    <div class="email-label labels">
+         <label for="email">Email</label> <br>
+         <input formControlName="email" type="email" class="email" placeholder="Enter your email id" >
+         <p>Job notifications will be sent to this email id</p>
+    </div>
+
+    <div class="password-label labels">
+        <label for="password">Password</label> <br>
+        <input (input)="validatePassword($event)" type="password" class="password" placeholder="(Minimum 6 Characters)" formControlName="password">
+        <p>Remember your password</p>
+    </div>
+
+    <div class="phoneNumber-label labels"> 
+        <label for="phone">Mobile Number</label><br>
+        <input type="number" (input)="validateLength($event)" class="phone" placeholder="Enter your mobile number" formControlName="phoneNumber">
+        <p>Recruiters will contact you on this number</p>
+    </div>
+
+    <div class="send-otp" *ngIf="otpInputVisiblity">
+       <button  (click)="sendOtp()" >Send OTP</button>
+    </div>
+
+    <div class="otp-input" *ngIf="isVisible">
+      <ngx-otp-input [options]="otpOptions" (input)="getOtp($event)" ></ngx-otp-input>
+    </div>
+    
+    <div class="btn" >
+        <button (click)="onSubmit()"> Register now</button>
+    </div>
+
+    <div class="signup-options">
+        <hr/>
+        <p class="para">Or signup with</p>
+        <hr/>
+      </div>
+
+    <div class="icons">
+        <div class="google"></div>
+        <div class="linkedIn"></div>
+        <div class="facebook"></div>
+    </div>
+  </form>
+</div>

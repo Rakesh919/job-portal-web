@@ -1,0 +1,147 @@
+<div class="container">
+  <h3>Post a Job</h3>
+  <p class="heading-para">Find the best talent for your company</p>
+
+  <div class="main">
+    <form [formGroup]="myForm" >
+      <div class="job-title">
+        <label for="job-title">Job Title</label> <br />
+        <input
+          type="text"
+          class="job-title-input"
+          placeholder="Add job title, role vacancies etc"
+          formControlName="jobtitle"
+        />
+      </div>
+
+      <div class="tags-title">
+        <div class="common">
+          <label for="tags">Tags</label>
+          <input type="text" class="tags-input"   formControlName="tags"/>
+        </div>
+
+        <div class="role-label">
+          <label for="job-role">Job Role</label>
+          <div class="input-container">
+            <select class="selector" #selectJobRole>
+              <option value="option">Select..</option>
+              <option value="Internship">Internship</option>
+              <option value="Entry level">Entry level</option>
+              <option value="Mid Senior level">Mid Senior level</option>
+              <option value="Senior level">Senior level</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <label for="salary" class="label-class">Salary</label>
+      <div class="salary-div">
+        <div class="input-inline">
+          <div class="common salary">
+            <label for="min-salary">Min Salary</label>
+            <div class="currency">
+              <input
+                type="text"
+                placeholder="Minimum salary"
+                class="salary-input"
+                formControlName="minimumSalary"
+              />
+              <select class="selector currency-selector" #minSalary>
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="common salary">
+            <label for="max-salary">Max Salary</label>
+            <div class="currency">
+              <input
+                type="text"
+                placeholder="Maximum salary"
+                class="salary-input"
+                formControlName="maximumSalary"
+              />
+              <select class="currency-selector selector" #maxSalary>
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="selector-div salary">
+            <select class="selector" #salaryOptions>
+              <option value="option">Select..</option>
+              <option value="Negotiable">Negotiable</option>
+              
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="tags-title vacancies-div">
+        <div class="role-label">
+          <label for="job-role">Vacancies</label>
+          <div class="input-container">
+            <select class="selector" #vacancy>
+              <option value="option">Select..</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="role-label">
+          <label for="job-role">Job Level</label>
+          <div class="input-container">
+            <select class="selector" #jobLevel>
+              <option value="option">Select..</option>
+              <option value="Entry level">Entry level</option>
+              <option value="Mid senior level">Mid senior level</option>
+              <option value="Senior level">Senior level</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <label class="label-class">location</label>
+      <div class="tags-title location-div">
+        <div class="role-label">
+          <label for="job-role">Country</label>
+          <div class="input-container country-input">
+            <select class="selector" #country>
+              <option value="">Select..</option>
+              <option value="India">India</option>
+              <option value="USA">USA</option>
+              <option value="Australlia">Australlia</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="role-label">
+          <label for="job-role">City</label>
+          <div class="input-container city-input">
+            <select class="selector" #city>
+              <option value="">{{option}}</option>
+              <option value="Gurugram">Gurugram</option>
+              <option value="Noida">Noida</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Faridabad">Faridabad</option>
+              <option value="Chennai">Chennai</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="description-div">
+        <label for="job-description">Job Description</label>
+        <textarea name="description" id="description" formControlName="description"></textarea>
+      </div>
+    </form>
+
+    <div class="btn">
+      <button (click)="onSubmit()">Post Job</button>
+    </div>
+  </div>
+</div>

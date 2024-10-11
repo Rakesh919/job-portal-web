@@ -1,0 +1,147 @@
+.form-container {
+  height: 80vh;
+  width: 100wh;
+}
+
+.heading{
+  font-size: 24px;
+  margin: 20px 0 0 140px;
+}
+
+.form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+}
+
+input {
+  height: 23px;
+  width: 400px;
+  border-radius: 3px;
+  border:1px solid #E7E7F1;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #acb2b9;
+}
+
+.forgot-password{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    color: #2D31AB;
+}
+
+button {
+  height: 35px;
+  width: 414px;
+  color: white;
+  background-color: #6300B3;
+  border: none;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+button:hover{
+    background-color: white;
+    border: 1px solid #6300B3;
+    color: #6300B3;
+}
+
+form {
+  margin: 30px 140px 0 140px;
+  height: 95%;
+  width: 60%;
+  box-shadow: 2px 4px 50px rgba(0, 0, 0, 0.1);
+  padding: 0 80px 0 80px;
+  border-radius: 1rem;
+}
+
+.form-container{
+  padding-left: 100px;
+}
+
+.image-container {
+    margin-top: 30px;
+    height: 460px;
+    width: 40%;
+    background-image: url('../assets/image.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+  }
+  
+  
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+
+
+.login-options{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr{
+    width: 140px;
+    margin-bottom: 15px;
+}
+
+.para{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icons{
+    display: flex;
+    /* background-color: lightyellow; */
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons div{
+  height: 45px;
+  width: 45px;
+  background-color:lightyellow;
+  border-radius: 5px;
+   box-shadow: 2px 4px 50px rgba(0, 0, 0, 0.1);
+}
+
+.register{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.register a{
+  color: #2D31AB;
+}
+
+.login-options p{
+  color: #5E6670;
+}
+
+
+
+
+/* .icons .facebook{
+  background-image: url('../assets/facebook.png');
+}
+.google{
+  background-image: url('../assets/google.png');
+}
+
+icons .linkedIn{
+  background-image: url('../assets/linkedIn.png');
+} */
