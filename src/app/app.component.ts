@@ -4,11 +4,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { PostJobComponent } from './components/post-job/post-job.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent,LoginComponent,SignupComponent,PostJobComponent],
+  imports: [RouterOutlet,NavbarComponent,LoginComponent,SignupComponent,PostJobComponent,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
