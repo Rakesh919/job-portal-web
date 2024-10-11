@@ -3,6 +3,17 @@
     <p class="heading">Registration form</p>
   
   <form class="login-form" [formGroup]="signupUser">
+
+    <div class="user-role">
+   <div class="employee-div">
+    <input id="employee" name="userRole" type="radio" formControlName="userRole" value="EMPLOYEE" > 
+   <label class="role" for="employee">As Employee</label>
+   </div>
+     <div class="employer-div">
+      <input id="employer" name="userRole" type="radio" formControlName="userRole" value="EMPLOYER">
+      <label for="employer" class="role">As Employer</label>
+     </div>
+    </div>
     
     <div class="name-label labels">
         <label for="name">Full name</label> <br>

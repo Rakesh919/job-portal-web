@@ -28,6 +28,7 @@ export class SignupComponent implements OnInit {
       phoneNumber: '',
       password: '',
       otp: '',
+      userRole:''
     });
   }
 
@@ -91,6 +92,8 @@ else
 
   onSubmit(): void {
 
+    console.log(this.signupUser.value)
+
     let data = {
       name:this.signupUser.get('name')?.value,
       email:this.signupUser.get('email')?.value,
@@ -98,7 +101,7 @@ else
       phoneNumber:String('+91'+this.signupUser.get('phoneNumber')?.value),
       otp:this.otp,
       otpId:this.otpId,
-      userRole:'EMPLOYER'
+      userRole:this.signupUser.get('userType')?.value
     }
 
     this.service.addUser(data).subscribe({
