@@ -1,0 +1,147 @@
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+  }
+  p{
+    color: #717B9E;
+    font-size: 13px;
+  }
+
+  .heading{
+    font-size: 24px;
+    margin-left: 390px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  form {
+    margin: 30px 140px 0 140px;
+    width: 50%;
+    /* height: 100%; */
+    box-shadow: 2px 4px 50px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-bottom: 0;
+    border-radius: 1rem;
+  }
+  
+.login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 1200px;
+}
+
+input{
+
+    height: 30px;
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border:1px solid #E7E7F1;
+}
+
+.labels{
+    margin-left: 10px;
+}
+
+button{
+    height: 35px;
+    width: 130px;
+    background-color:#6300b3;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.btn{
+   display: flex;
+   justify-content: center;
+}
+
+button:hover{
+    background-color: white;
+    border: 1px solid #6300b3;
+    color: #6300b3;
+}
+    
+  
+ input:focus {
+    outline: none;
+    border: 1px solid #acb2b9;
+  }
+  
+  .name-label{
+    margin-top: 20px;
+  }
+
+  .signup-options{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr{
+    width: 290px;
+    margin-bottom: 15px;
+}
+
+.para{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+  .icons{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+
+  .icons div{
+    height: 50px;
+    width: 50px;
+    border-radius: 3px;
+    background-color: lightyellow;
+  }
+
+  .otp-input{
+    display: flex;
+    justify-content: center;
+  }
+
+  .ngx-otp{
+    display: flex;
+    justify-content: center;
+  }
+
+  form{
+    height: 1600px;
+  }
+
+
+  input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.send-otp button{
+  margin-left: 15px;
+  width: 100px;
+  border-radius: 5px;
+  background-color:#6300b3;
+}
+
+.send-otp button:hover{
+  background-color: white;
+  color: #6300b3;
+  border: 1px solid #6300b3;
+}
