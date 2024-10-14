@@ -1,1 +1,55 @@
-<p>find-jobs works!</p>
+<div class="main">
+<div class="container">
+    <div class="headings">
+        <h4>Job Search</h4>
+        <p style="line-height: 5px;">Search for your desired job matching your skills</p>
+    </div>
+
+    <div class="filter-input-div">
+        <div class="search-div flex-box" style="margin-left: 30px;">
+            <mat-icon>search</mat-icon>
+            <input type="text" placeholder="Enter Job title">
+            <div class="horizontal-line"></div>
+        </div>
+
+        <div class="location-div flex-box">
+            <mat-icon>location_on</mat-icon>
+            <input type="text" placeholder="Enter location">
+            <div class="horizontal-line"></div>
+        </div>
+
+        <div class="experience-div flex-box">
+            <mat-icon>work_outline</mat-icon>
+            <input type="text" placeholder="Years of expericence">
+        </div>
+
+        <button>Search</button>
+    </div>
+
+    <div class="content-div">
+  
+        <div class="left">
+            <p class="first">Filter</p>
+            <p class="second" style="color: #808080;">clear All</p>
+        </div>
+      
+        <div class="right">
+            <p class="first">All Jobs(121)</p>
+            <div class="option-div">
+                <select class="selection-input" >
+                    <option value="Popular">popular</option>
+                    <option value="mostApplied">most applied</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-container">
+        <div class="filter"></div>
+        <div class="all-jobs">
+            <div class="job-container"></div>
+            <div class="job-container"></div>
+        </div>
+    </div>
+</div>
+</div>

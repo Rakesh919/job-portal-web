@@ -32,11 +32,25 @@
         <p>Remember your password</p>
     </div>
 
+    <div class="company-name">
+      <div class="company-input-div">
+        <label for="company">Company Name</label>
+      <input type="text" class="company-name-input" placeholder="Company name">
+      </div>
+
+      <div class="image-div">
+        <label for="image">Company logo</label>
+        <input type="file" accept="image/*">
+      </div>
+    </div>
+
     <div class="phoneNumber-label labels"> 
         <label for="phone">Mobile Number</label><br>
         <input type="number" (input)="validateLength($event)" class="phone" placeholder="Enter your mobile number" formControlName="phoneNumber">
         <p>Recruiters will contact you on this number</p>
     </div>
+
+    
 
     <div class="send-otp" *ngIf="otpInputVisiblity">
        <button  (click)="sendOtp()" >Send OTP</button>

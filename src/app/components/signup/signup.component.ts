@@ -14,8 +14,6 @@ import { UserService } from '../../service/user.service';
 export class SignupComponent implements OnInit {
   constructor(private fb: FormBuilder,private service:UserService,private cd:ChangeDetectorRef) {}
 
-  // @ViewChild('otpInput') otpInput!:ElementRef;
-
   signupUser!: FormGroup;
   validatePhoneNumber: Number = 0;
   otpId :string = ''

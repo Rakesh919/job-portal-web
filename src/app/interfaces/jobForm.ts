@@ -10,5 +10,6 @@ export interface IJobForm{
     job_level:string,
     country:string,
     city:string,
-    job_description:string
+    job_description:string,
+    apply_before:any,
 }

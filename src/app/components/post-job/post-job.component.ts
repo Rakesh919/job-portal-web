@@ -2,11 +2,17 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from '../../service/user.service';
 import { IJobForm } from '../../interfaces/jobForm';
+import { CalendarModule } from 'primeng/calendar';
+import { CommonModule } from '@angular/common';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-post-job',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,CommonModule,CalendarModule,MatDatepickerModule,MatNativeDateModule,MatInputModule],
   templateUrl: './post-job.component.html',
   styleUrl: './post-job.component.css',
 })
@@ -26,6 +32,8 @@ export class PostJobComponent implements OnInit {
 
   option: string = 'select..';
 
+  date:any =''
+
   ngOnInit(): void {
     this.myForm = this.fb.group({
       jobtitle: '',
@@ -33,6 +41,7 @@ export class PostJobComponent implements OnInit {
       minimumSalary: '',
       maximumSalary: '',
       description: '',
+      date:''
     });
   }
 
@@ -50,27 +59,26 @@ export class PostJobComponent implements OnInit {
         city: this.city.nativeElement.value,
         job_description: this.myForm.get('description')?.value,
         salary_options: this.salaryOptions.nativeElement.value,
+        apply_before:this.myForm.get('date')?.value
       };
 
-      this.service.submitForm(formData,'/job/post').subscribe(
-        (response) => {
-          console.log(response);
+
+      this.service.submitForm(formData,'/job/post').subscribe({
+        next:(res:any)=>{
+          console.log(res)
         },
-        (error) => {
-          console.log(error);
+        error:(res:any)=>{
+          console.log(res.error)
         }
-      );
+      })
 
-      // console.log(this.myForm.value);
-      // console.log(this.jobRoleSelect.nativeElement.value)
-      // console.log(this.minSalaryCurrency.nativeElement.value)
-      // console.log(this.maxSalaryCurrency.nativeElement.value)
-      // console.log(this.salaryOptions.nativeElement.value)
-      // console.log(this.vacancies.nativeElement.value)
-      // console.log(this.level.nativeElement.value)
-      // console.log(this.country.nativeElement.value)
-      // console.log(this.city.nativeElement.value)
+    }
+  }
 
+  openDatePicker() {
+    const dateInput = document.getElementById('start-input') as HTMLInputElement;
+    if (dateInput) {
+      dateInput.showPicker(); // Opens the date picker
     }
   }
 }
