@@ -117,9 +117,10 @@ mat-icon{
 }
 
 .job-container{
-    height: 220px;
-    width: 300px;
-    background-color: #EFE2F8;
+    padding: 15px;
+    height: 250px;
+    width: 370px;
+    background-color: #F8F2FC;
     border-radius: 5px;
 }
 
@@ -198,3 +199,142 @@ a{
 #first-line{
     margin-left: 80px;
 }
+
+.img{
+    height: 55px;
+    width: 55px;
+  background-image:url('../assets/google.png');
+  background-size: cover;
+  border-radius: 30px;
+}
+
+.company-image{
+    display: flex;
+    gap: 10px;
+}
+
+.comapny-name >p{
+    margin-top: 5px;
+    background-color: lightgreen;
+}
+
+.img p{
+    background-color: lightblue;
+}
+
+.buttons{
+    display: flex;
+    gap:40px;
+    justify-content: center;
+}
+
+
+.buttons button{
+    background-color: #6300B3;
+    height: 35px;
+    width: 140px;
+    border: none;
+    font-size: 14px;
+    border-radius: 3px;
+    color: white;
+}
+
+.buttons button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid #6300B3;
+}
+
+.main-heading{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 10px;
+}
+.role{
+ font-size: 13px;
+ color: #767F8C;
+}
+
+.job-role{
+    padding: 5px;
+    color: #0BA02C;
+    background-color: #E7F6EA;
+    font-weight: 600;
+}
+
+.company-details {
+  display: flex;
+  margin-top: 20px;
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.location-details p{
+    line-height:1px;
+    margin-top: 10px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #767F8C;
+}
+
+mat-icon{
+    color: #767F8C;
+}
+
+.location p{
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.applicants{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.bookmark-icon{
+    display: flex;
+    justify-content: space-between;
+}
+
+.apple{
+    background-image:url('../assets/apple-logo.svg') ;
+    background-size: cover;
+}
+
+.intel{
+    background-image: url('../assets/intel-logo.svg');
+    background-size: cover;
+}
+
+.second-container .job-role{
+    background-color:#F1E0FF ;
+    color: #6300B3;
+}
+
+.link-tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-all-link{
+    height: 0px;
+    width: 0;
+    text-wrap: nowrap;
+}
+
+

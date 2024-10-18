@@ -147,7 +147,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 100vh;
+  height: 1000px;
   border-radius: 20px;
   width: 100%;
 }
@@ -208,4 +208,20 @@ label{
     margin: 18px 0 10px 0;
     font-weight: 580;
     font-size: 22px;
+}
+
+
+
+.date-div{
+  display: flex;
+  gap: 20px;
+}
+
+.flex-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.date-input{
+  width: 310px;
 }

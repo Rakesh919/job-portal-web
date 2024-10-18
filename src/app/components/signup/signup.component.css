@@ -165,3 +165,16 @@ text-wrap: nowrap;
 .user-role label{
   margin-top: 3px;
 }
+
+.company-name{
+  margin-left:10px;
+}
+
+
+.company-name{
+  display: flex;
+}
+
+.company-input-div{
+  width: 335px;
+}
