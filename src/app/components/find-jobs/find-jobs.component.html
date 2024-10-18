@@ -1,55 +1,199 @@
 <div class="main">
-<div class="container">
+  <div class="container">
     <div class="headings">
-        <h4>Job Search</h4>
-        <p style="line-height: 5px;">Search for your desired job matching your skills</p>
+      <h4>Job Search</h4>
+      <p style="line-height: 5px">
+        Search for your desired job matching your skills
+      </p>
     </div>
 
     <div class="filter-input-div">
-        <div class="search-div flex-box" style="margin-left: 30px;">
-            <mat-icon>search</mat-icon>
-            <input type="text" placeholder="Enter Job title">
-            <div class="horizontal-line"></div>
-        </div>
+      <div class="search-div flex-box" style="margin-left: 30px">
+        <mat-icon>search</mat-icon>
+        <input type="text" placeholder="Enter Job title" />
+        <div class="horizontal-line"></div>
+      </div>
 
-        <div class="location-div flex-box">
-            <mat-icon>location_on</mat-icon>
-            <input type="text" placeholder="Enter location">
-            <div class="horizontal-line"></div>
-        </div>
+      <div class="location-div flex-box">
+        <mat-icon>location_on</mat-icon>
+        <input type="text" placeholder="Enter location" />
+        <div class="horizontal-line"></div>
+      </div>
 
-        <div class="experience-div flex-box">
-            <mat-icon>work_outline</mat-icon>
-            <input type="text" placeholder="Years of expericence">
-        </div>
+      <div class="experience-div flex-box">
+        <mat-icon>work_outline</mat-icon>
+        <input type="text" placeholder="Years of expericence" />
+      </div>
 
-        <button>Search</button>
+      <button>Search</button>
     </div>
 
     <div class="content-div">
-  
-        <div class="left">
-            <p class="first">Filter</p>
-            <p class="second" style="color: #808080;">clear All</p>
+      <div class="left">
+        <p class="first">Filter</p>
+        <p class="second" style="color: #808080">clear All</p>
+      </div>
+
+      <div class="right">
+        <p class="first">All Jobs(121)</p>
+        <div class="option-div">
+          <select class="selection-input">
+            <option value="Popular">popular</option>
+            <option value="mostApplied">most applied</option>
+          </select>
         </div>
-      
-        <div class="right">
-            <p class="first">All Jobs(121)</p>
-            <div class="option-div">
-                <select class="selection-input" >
-                    <option value="Popular">popular</option>
-                    <option value="mostApplied">most applied</option>
-                </select>
-            </div>
-        </div>
+      </div>
     </div>
 
     <div class="filter-container">
-        <div class="filter"></div>
-        <div class="all-jobs">
-            <div class="job-container"></div>
-            <div class="job-container"></div>
+      <div class="filter">
+        <p>Salary Range</p>
+        <div class="salary-input">
+          <input class="min-max" type="text" placeholder="Min" />
+          <input class="min-max" type="text" placeholder="Max" />
         </div>
+        <hr />
+
+        <div class="type-of-job">
+          <p>Job Type</p>
+          <div class="flex-boxes">
+            <input type="checkbox" id="all" class="checkbox-input" />
+            <label for="all">All (1275)</label>
+          </div>
+          <div class="flex-boxes">
+            <input type="checkbox" id="full-time" class="checkbox-input" />
+            <label for="full-time">Full-Time (450)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="part-time" type="checkbox" class="checkbox-input" />
+            <label for="part-time">Part-Time (145)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="internship" type="checkbox" class="checkbox-input" />
+            <label for="internship">Internship (180)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="contract" type="checkbox" class="checkbox-input" />
+            <label for="contract">Contract (12)</label>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="type-of-job">
+          <p>Work Mode</p>
+          <div class="flex-boxes">
+            <input type="checkbox" id="on-site" class="checkbox-input" />
+            <label for="on-site">On Site (1275)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="remote" type="checkbox" class="checkbox-input" />
+            <label for="remote">Remote (1275)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="hybrid" type="checkbox" class="checkbox-input" />
+            <label for="hybrid">Hybrid (1275)</label>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="type-of-job">
+          <p>Job Functions</p>
+          <div class="flex-boxes">
+            <input type="checkbox" id="marketing" class="checkbox-input" />
+            <label for="marketing">Marketing (21)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="engineering" type="checkbox" class="checkbox-input" />
+            <label for="engineering">Engineering (45)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="design" type="checkbox" class="checkbox-input" />
+            <label for="design">Design (71)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="sales" type="checkbox" class="checkbox-input" />
+            <label for="sales">Sales (24)</label>
+          </div>
+          <div class="flex-boxes">
+            <input
+              id="customer-service"
+              type="checkbox"
+              class="checkbox-input"
+            />
+            <label for="customer-service">Customer Service (109)</label>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="type-of-job">
+          <p>Experience Level</p>
+          <div class="flex-boxes">
+            <input type="checkbox" id="entry-level" class="checkbox-input" />
+            <label for="entry-level">Fresher/Entry-level (265)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="junior" type="checkbox" class="checkbox-input" />
+            <label for="junior">Junior (21)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="mid-level" type="checkbox" class="checkbox-input" />
+            <label for="mid-level">Mid-level (212)</label>
+          </div>
+          <div class="flex-boxes">
+            <input id="senior" type="checkbox" class="checkbox-input" />
+            <label for="senior">Senior (12)</label>
+          </div>
+          <div class="flex-boxes">
+            <input
+              id="lead-managerial"
+              type="checkbox"
+              class="checkbox-input"
+            />
+            <label for="lead-managerial">Lead/Managerial (24)</label>
+          </div>
+
+          <div class="flex-boxes">
+            <input id="director" type="checkbox" class="checkbox-input" />
+            <label for="director">Director/Executive (10)</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="all-jobs" >
+        <div class="job-container" *ngFor="let details of jobDetails">
+          <div class="title-div">
+            <h4 class="title">{{details.job_title}}</h4>
+            <mat-icon>bookmark_outline</mat-icon>
+          </div>
+          <p style="line-height: 0px" class="sub-title">
+            <span class="span-sub">PART-TIME </span>Salary: {{details.min_salary}} - 25,000 INR
+          </p>
+
+          <div class="company-details">
+            <div class="img intel"></div>
+            <div class="location-details">
+              <p style="margin-top: 12px;">Company Name</p>
+              <div class="location">
+                <mat-icon>location_on</mat-icon>
+                <p>Delhi, India</p>
+              </div>
+            </div>
+          </div>
+          <p style="margin: 20px 0 0 20px">20+ applicants</p>
+
+          <div class="buttons">
+            <button>View details</button>
+            <button>Apply now</button>
+          </div>
+        </div>
+
+
+      <div style="background-color: white;"  class="job-container"></div>
+
+      </div>
     </div>
-</div>
+  </div>
 </div>

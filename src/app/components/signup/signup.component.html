@@ -6,11 +6,11 @@
 
     <div class="user-role">
    <div class="employee-div">
-    <input id="employee" name="userRole" type="radio" formControlName="userRole" value="EMPLOYEE" > 
+    <input id="employee" name="userRole" type="radio" formControlName="userRole" value="EMPLOYEE" (change)="getUserRole($event)" > 
    <label class="role" for="employee">As Employee</label>
    </div>
      <div class="employer-div">
-      <input id="employer" name="userRole" type="radio" formControlName="userRole" value="EMPLOYER">
+      <input id="employer" name="userRole" type="radio" formControlName="userRole" value="EMPLOYER" (change)="getUserRole($event)">
       <label for="employer" class="role">As Employer</label>
      </div>
     </div>
@@ -23,7 +23,7 @@
     <div class="email-label labels">
          <label for="email">Email</label> <br>
          <input formControlName="email" type="email" class="email" placeholder="Enter your email id" >
-         <p>Job notifications will be sent to this email id</p>
+         <p *ngIf="!employerFieldsVisiblity">Job notifications will be sent to this email id</p>
     </div>
 
     <div class="password-label labels">
@@ -32,7 +32,7 @@
         <p>Remember your password</p>
     </div>
 
-    <div class="company-name">
+    <div class="company-name" *ngIf="employerFieldsVisiblity">
       <div class="company-input-div">
         <label for="company">Company Name</label>
       <input type="text" class="company-name-input" placeholder="Company name">
@@ -47,7 +47,7 @@
     <div class="phoneNumber-label labels"> 
         <label for="phone">Mobile Number</label><br>
         <input type="number" (input)="validateLength($event)" class="phone" placeholder="Enter your mobile number" formControlName="phoneNumber">
-        <p>Recruiters will contact you on this number</p>
+        <p *ngIf="!employerFieldsVisiblity">Recruiters will contact you on this number</p>
     </div>
 
     

@@ -23,8 +23,7 @@
         <div class="role-label">
           <label for="job-role">Job Role</label>
           <div class="input-container">
-            <select class="selector" #selectJobRole>
-              <option value="option">Select..</option>
+            <select class="selector" formControlName="jobRole">
               <option value="Internship">Internship</option>
               <option value="Entry level">Entry level</option>
               <option value="Mid Senior level">Mid Senior level</option>
@@ -38,12 +37,12 @@
 
         <div class="start-date flex-box">
           <label for="start">Start date</label>
-          <input id="start" class="date-input" type="date" formControlName="date">
+          <input id="start" class="date-input start_date" type="date" formControlName="start_date">
         </div>
         
         <div class="end-date flex-box">
           <label for="end">Last Date to apply</label>
-          <input id="end" class="date-input" type="date" formControlName="date">
+          <input id="end" class="date-input end_date" type="date" formControlName="end_date">
         </div>
       </div>
 
@@ -57,9 +56,9 @@
                 type="text"
                 placeholder="Minimum salary"
                 class="salary-input"
-                formControlName="minimumSalary"
+                formControlName="min_salary"
               />
-              <select class="selector currency-selector" #minSalary>
+              <select class="selector currency-selector min_salary_currency" formControlName="min_salary_currency">
                 <option value="INR">INR</option>
                 <option value="USD">USD</option>
               </select>
@@ -73,9 +72,9 @@
                 type="text"
                 placeholder="Maximum salary"
                 class="salary-input"
-                formControlName="maximumSalary"
+                formControlName="max_salary"
               />
-              <select class="currency-selector selector" #maxSalary>
+              <select class="currency-selector selector max_salary_currency" formControlName="max_salary_currency">
                 <option value="INR">INR</option>
                 <option value="USD">USD</option>
               </select>
@@ -83,8 +82,7 @@
           </div>
 
           <div class="selector-div salary">
-            <select class="selector" #salaryOptions>
-              <option value="option">Select..</option>
+            <select class="selector salary_options" formControlName="salary_options">
               <option value="Negotiable">Negotiable</option>
               
             </select>
@@ -96,8 +94,7 @@
         <div class="role-label">
           <label for="job-role">Vacancies</label>
           <div class="input-container">
-            <select class="selector" #vacancy>
-              <option value="option">Select..</option>
+            <select class="selector vacancy" formControlName="vacancy">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -108,8 +105,7 @@
         <div class="role-label">
           <label for="job-role">Job Level</label>
           <div class="input-container">
-            <select class="selector" #jobLevel>
-              <option value="option">Select..</option>
+            <select class="selector job_level" formControlName="job_level">
               <option value="Entry level">Entry level</option>
               <option value="Mid senior level">Mid senior level</option>
               <option value="Senior level">Senior level</option>
@@ -123,8 +119,7 @@
         <div class="role-label">
           <label for="job-role">Country</label>
           <div class="input-container country-input">
-            <select class="selector" #country>
-              <option value="">Select..</option>
+            <select class="selector country" formControlName="country">
               <option value="India">India</option>
               <option value="USA">USA</option>
               <option value="Australlia">Australlia</option>
@@ -135,7 +130,7 @@
         <div class="role-label">
           <label for="job-role">City</label>
           <div class="input-container city-input">
-            <select class="selector" #city>
+            <select class="selector city" formControlName="city" >
               <option value="">{{option}}</option>
               <option value="Gurugram">Gurugram</option>
               <option value="Noida">Noida</option>
@@ -150,7 +145,7 @@
 
       <div class="description-div">
         <label for="job-description">Job Description</label>
-        <textarea name="description" id="description" formControlName="description"></textarea>
+        <textarea name="description" id="description" formControlName="job_description"></textarea>
       </div>
     </form>
 

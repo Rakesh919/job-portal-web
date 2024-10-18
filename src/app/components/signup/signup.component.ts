@@ -18,6 +18,7 @@ export class SignupComponent implements OnInit {
   validatePhoneNumber: Number = 0;
   otpId :string = ''
   otp:string = ''
+  employerFieldsVisiblity:boolean = false;
 
   ngOnInit(): void {
     this.signupUser = this.fb.group({
@@ -26,9 +27,16 @@ export class SignupComponent implements OnInit {
       phoneNumber: '',
       password: '',
       otp: '',
-      userRole:''
+      userRole: ['EMPLOYEE'],
+      companyName: '',
+      image: ''
     });
+  
+    this.cd.detectChanges();
+  
+    console.log(this.signupUser.value);
   }
+  
 
   otpInputVisiblity: boolean = false;
   isVisible:boolean = false;
@@ -42,14 +50,12 @@ export class SignupComponent implements OnInit {
   validateLength(event: any): void {
     const value = event.target.value;
     
-    // Check if the value starts with a number 6 or greater
     if (!/^([6-9])[0-9]*$/.test(value)) {
       event.target.value = '';
       this.otpInputVisiblity = false;
       return;
     }
   
-    // Limit the length to 10 digits
     if (value.length > 10) {
       event.target.value = value.slice(0, 10);
     }
@@ -62,10 +68,6 @@ else
     if (event.target.value.length > 20) {
       event.target.value = event.target.value.slice(0, 20);
     }
-  }
-
-  onClick(){
-    console.log('otp sent')
   }
 
   sendOtp(){
@@ -83,15 +85,12 @@ else
         
       },
       error: (res: any) => {
-        console.log(res);
+        console.log(res.error);
       },
     })
   }
 
   onSubmit(): void {
-
-    console.log(this.signupUser.value)
-
     let data = {
       name:this.signupUser.get('name')?.value,
       email:this.signupUser.get('email')?.value,
@@ -99,16 +98,16 @@ else
       phoneNumber:String('+91'+this.signupUser.get('phoneNumber')?.value),
       otp:this.otp,
       otpId:this.otpId,
-      userRole:this.signupUser.get('userType')?.value
+      userRole:this.signupUser.get('userRole')?.value
     }
-
+    console.log(data)
     this.service.addUser(data).subscribe({
       next:(res:any)=>{
         console.log(res);
         localStorage.setItem('token',res.token)
       },
       error:(res:any)=>{
-        console.log(res);
+        console.log(res.error);
       }
     })
   }
@@ -119,6 +118,15 @@ else
       this.otp = otpInput
     }
     
+  }
+
+  getUserRole(event:any){
+   if(event.target.value ==='EMPLOYER'){
+    this.employerFieldsVisiblity = !this.employerFieldsVisiblity;
+   }
+   else{
+    this.employerFieldsVisiblity = !this.employerFieldsVisiblity
+   }
   }
 
 
